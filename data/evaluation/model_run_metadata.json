@@ -1,0 +1,35 @@
+{
+  "run_date": "2026-08-17",
+  "device": "cpu",
+  "python": "3.12.13",
+  "torch": "2.13.0+cpu",
+  "numpy": "2.5.2",
+  "sentence_transformers": "5.7.0",
+  "transformers": "5.15.0",
+  "faiss": "1.15.0",
+  "embedding_model": "BAAI/bge-m3",
+  "embedding_dimensions": 1024,
+  "embedding_dtype": "float32",
+  "sample_vector_l2_norm": 1.0000001192092896,
+  "reranker_model": "BAAI/bge-reranker-v2-m3",
+  "retrieval_backend": "bm25+BAAI/bge-m3+faiss+BAAI/bge-reranker-v2-m3",
+  "generator_backend": "extractive-offline",
+  "case_count": 5,
+  "test_count": 47,
+  "agentic_controller": "rule-based-bounded-v1",
+  "max_agent_iterations": 2,
+  "average_agent_iterations": 1.0,
+  "agent_abstention_rate": 0.0,
+  "agent_route_distribution": {
+    "dense": 2,
+    "hybrid": 1,
+    "lexical": 2
+  },
+  "warm_cache_benchmark_date": "2026-08-15",
+  "warm_cache_run_seconds": 10.25,
+  "model_cache_size_gb": {
+    "BAAI/bge-m3": 4.25,
+    "BAAI/bge-reranker-v2-m3": 2.14
+  },
+  "results_file": "data/evaluation/results_agentic_bge_m3_reranker.json"
+}

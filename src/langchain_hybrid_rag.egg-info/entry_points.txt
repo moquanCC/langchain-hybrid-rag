@@ -1,0 +1,2 @@
+[console_scripts]
+hybrid-rag = hybrid_rag.cli:main

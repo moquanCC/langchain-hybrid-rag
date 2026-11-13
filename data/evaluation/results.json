@@ -1,0 +1,86 @@
+{
+  "backends": {
+    "retrieval": "bm25+local-hashing-char-ngram-v1+faiss+identity",
+    "generator": "extractive-offline"
+  },
+  "summary": {
+    "recall_at_3": 1.0,
+    "mrr": 1.0,
+    "ndcg_at_3": 1.0,
+    "required_term_coverage": 1.0,
+    "citation_validity": 1.0,
+    "case_count": 5
+  },
+  "cases": [
+    {
+      "id": "q1",
+      "question": "错误码 E101 应该如何处理？",
+      "retrieved_sources": [
+        "auth.md",
+        "retrieval.md",
+        "reranking.md"
+      ],
+      "recall": 1.0,
+      "reciprocal_rank": 1.0,
+      "ndcg": 1.0,
+      "required_term_coverage": 1.0,
+      "citation_valid": true
+    },
+    {
+      "id": "q2",
+      "question": "为什么同时使用 BM25 和稠密向量检索？",
+      "retrieved_sources": [
+        "retrieval.md",
+        "rrf.md",
+        "reranking.md"
+      ],
+      "recall": 1.0,
+      "reciprocal_rank": 1.0,
+      "ndcg": 1.0,
+      "required_term_coverage": 1.0,
+      "citation_valid": true
+    },
+    {
+      "id": "q3",
+      "question": "RRF 为什么不直接相加原始分数，默认 k 是多少？",
+      "retrieved_sources": [
+        "rrf.md",
+        "chunking.md",
+        "reranking.md"
+      ],
+      "recall": 1.0,
+      "reciprocal_rank": 1.0,
+      "ndcg": 1.0,
+      "required_term_coverage": 1.0,
+      "citation_valid": true
+    },
+    {
+      "id": "q4",
+      "question": "项目的切片大小、重叠长度和可追溯元数据是什么？",
+      "retrieved_sources": [
+        "chunking.md",
+        "reranking.md",
+        "rrf.md"
+      ],
+      "recall": 1.0,
+      "reciprocal_rank": 1.0,
+      "ndcg": 1.0,
+      "required_term_coverage": 1.0,
+      "citation_valid": true
+    },
+    {
+      "id": "q5",
+      "question": "为什么 CrossEncoder 只重排少量候选？",
+      "retrieved_sources": [
+        "reranking.md",
+        "rrf.md",
+        "auth.md"
+      ],
+      "recall": 1.0,
+      "reciprocal_rank": 1.0,
+      "ndcg": 1.0,
+      "required_term_coverage": 1.0,
+      "citation_valid": true
+    }
+  ]
+}

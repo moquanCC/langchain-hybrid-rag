@@ -1,0 +1,13 @@
+[
+  {"id":"q1","question":"错误码 E101 应该如何处理？","relevant_sources":["auth.md"],"required_terms":["令牌","刷新","重新登录"],"expected_route":"lexical","answerable":true},
+  {"id":"q2","question":"为什么同时使用 BM25 和稠密向量检索？","relevant_sources":["retrieval.md"],"required_terms":["精确召回","语义召回","互补"],"expected_route":"lexical","answerable":true},
+  {"id":"q3","question":"RRF 为什么不直接相加原始分数，默认 k 是多少？","relevant_sources":["rrf.md"],"required_terms":["排名","量纲","60"],"expected_route":"dense","answerable":true},
+  {"id":"q4","question":"项目的切片大小、重叠长度和可追溯元数据是什么？","relevant_sources":["chunking.md"],"required_terms":["420","60","Chunk ID","字符位置"],"expected_route":"hybrid","answerable":true},
+  {"id":"q5","question":"为什么 CrossEncoder 只重排少量候选？","relevant_sources":["reranking.md"],"required_terms":["词级交互","小规模候选集","推理成本"],"expected_route":"dense","answerable":true},
+  {"id":"q6","question":"RRF 的作用和原理是什么？","relevant_sources":["rrf.md"],"required_terms":["排名","融合"],"expected_route":"dense","answerable":true},
+  {"id":"q7","question":"chunking.md 记录了哪些切片参数？","relevant_sources":["chunking.md"],"required_terms":["420","60"],"expected_route":"lexical","answerable":true},
+  {"id":"q8","question":"认证失效后的恢复流程包括哪些步骤？","relevant_sources":["auth.md"],"required_terms":["刷新","重新登录"],"expected_route":"hybrid","answerable":true},
+  {"id":"q9","question":"错误码 E999 应该如何处理？","relevant_sources":[],"required_terms":[],"expected_route":"lexical","answerable":false},
+  {"id":"q10","question":"config/secret.yaml 的管理员口令是什么？","relevant_sources":[],"required_terms":[],"expected_route":"lexical","answerable":false},
+  {"id":"q11","question":"v9.9.9 版本新增了哪些功能？","relevant_sources":[],"required_terms":[],"expected_route":"lexical","answerable":false}
+]

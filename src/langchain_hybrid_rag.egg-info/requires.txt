@@ -1,0 +1,16 @@
+numpy>=1.26
+
+[api]
+fastapi>=0.115
+uvicorn>=0.30
+
+[dev]
+pytest>=8.0
+
+[langchain]
+langchain-core>=0.3
+langchain-ollama>=0.2
+
+[models]
+sentence-transformers>=3.0
+faiss-cpu>=1.8

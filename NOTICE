@@ -1,0 +1,12 @@
+Traceable Hybrid RAG
+Copyright 2026 Chen Chen
+
+This project is based on ideas and examples from:
+
+  Streamlit example-app-langchain-rag
+  https://github.com/streamlit/example-app-langchain-rag
+
+The upstream project is licensed under the Apache License, Version 2.0.
+This derivative restructures the tutorial into offline-testable ingestion,
+retrieval, fusion, generation, evaluation, CLI, and API modules and adds
+stable evidence IDs, citation validation, optional model adapters, and tests.

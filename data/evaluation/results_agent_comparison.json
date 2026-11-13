@@ -1,0 +1,681 @@
+{
+  "dataset": {
+    "synthetic": true,
+    "human_gold": false,
+    "case_count": 11,
+    "purpose": "bounded_agent_behavior_regression"
+  },
+  "fixed_pipeline": {
+    "backends": {
+      "retrieval": "bm25+local-hashing-char-ngram-v1+faiss+identity",
+      "generator": "extractive-offline"
+    },
+    "summary": {
+      "recall_at_3": 0.7272727272727273,
+      "mrr": 0.6818181818181818,
+      "ndcg_at_3": 0.6937208866883143,
+      "required_term_coverage": 1.0,
+      "citation_validity": 1.0,
+      "case_count": 11,
+      "task_success_rate": 0.7272727272727273,
+      "tool_selection_accuracy": 0.0,
+      "abstention_precision": 0.0,
+      "abstention_recall": 0.0,
+      "abstention_f1": 0.0,
+      "retry_success_rate": 0.0,
+      "retry_case_count": 0,
+      "max_step_termination_rate": 0.0,
+      "average_agent_iterations": 0.0,
+      "agent_abstention_rate": 0.0,
+      "agent_route_distribution": {}
+    },
+    "cases": [
+      {
+        "id": "q1",
+        "question": "错误码 E101 应该如何处理？",
+        "retrieved_sources": [
+          "auth.md",
+          "retrieval.md",
+          "reranking.md"
+        ],
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": true,
+        "abstained": false,
+        "task_success": true,
+        "expected_route": "lexical",
+        "route_correct": null,
+        "agent": {
+          "iterations": 0,
+          "routes": [],
+          "actions": [],
+          "stop_reason": "fixed_pipeline_complete"
+        }
+      },
+      {
+        "id": "q2",
+        "question": "为什么同时使用 BM25 和稠密向量检索？",
+        "retrieved_sources": [
+          "retrieval.md",
+          "rrf.md",
+          "reranking.md"
+        ],
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": true,
+        "abstained": false,
+        "task_success": true,
+        "expected_route": "lexical",
+        "route_correct": null,
+        "agent": {
+          "iterations": 0,
+          "routes": [],
+          "actions": [],
+          "stop_reason": "fixed_pipeline_complete"
+        }
+      },
+      {
+        "id": "q3",
+        "question": "RRF 为什么不直接相加原始分数，默认 k 是多少？",
+        "retrieved_sources": [
+          "rrf.md",
+          "reranking.md",
+          "chunking.md"
+        ],
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": true,
+        "abstained": false,
+        "task_success": true,
+        "expected_route": "dense",
+        "route_correct": null,
+        "agent": {
+          "iterations": 0,
+          "routes": [],
+          "actions": [],
+          "stop_reason": "fixed_pipeline_complete"
+        }
+      },
+      {
+        "id": "q4",
+        "question": "项目的切片大小、重叠长度和可追溯元数据是什么？",
+        "retrieved_sources": [
+          "chunking.md",
+          "rrf.md",
+          "reranking.md"
+        ],
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": true,
+        "abstained": false,
+        "task_success": true,
+        "expected_route": "hybrid",
+        "route_correct": null,
+        "agent": {
+          "iterations": 0,
+          "routes": [],
+          "actions": [],
+          "stop_reason": "fixed_pipeline_complete"
+        }
+      },
+      {
+        "id": "q5",
+        "question": "为什么 CrossEncoder 只重排少量候选？",
+        "retrieved_sources": [
+          "reranking.md",
+          "rrf.md",
+          "auth.md"
+        ],
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": true,
+        "abstained": false,
+        "task_success": true,
+        "expected_route": "dense",
+        "route_correct": null,
+        "agent": {
+          "iterations": 0,
+          "routes": [],
+          "actions": [],
+          "stop_reason": "fixed_pipeline_complete"
+        }
+      },
+      {
+        "id": "q6",
+        "question": "RRF 的作用和原理是什么？",
+        "retrieved_sources": [
+          "reranking.md",
+          "rrf.md",
+          "chunking.md"
+        ],
+        "recall": 1.0,
+        "reciprocal_rank": 0.5,
+        "ndcg": 0.6309297535714575,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": true,
+        "abstained": false,
+        "task_success": true,
+        "expected_route": "dense",
+        "route_correct": null,
+        "agent": {
+          "iterations": 0,
+          "routes": [],
+          "actions": [],
+          "stop_reason": "fixed_pipeline_complete"
+        }
+      },
+      {
+        "id": "q7",
+        "question": "chunking.md 记录了哪些切片参数？",
+        "retrieved_sources": [
+          "chunking.md",
+          "auth.md",
+          "rrf.md"
+        ],
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": true,
+        "abstained": false,
+        "task_success": true,
+        "expected_route": "lexical",
+        "route_correct": null,
+        "agent": {
+          "iterations": 0,
+          "routes": [],
+          "actions": [],
+          "stop_reason": "fixed_pipeline_complete"
+        }
+      },
+      {
+        "id": "q8",
+        "question": "认证失效后的恢复流程包括哪些步骤？",
+        "retrieved_sources": [
+          "auth.md",
+          "reranking.md",
+          "rrf.md"
+        ],
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": true,
+        "abstained": false,
+        "task_success": true,
+        "expected_route": "hybrid",
+        "route_correct": null,
+        "agent": {
+          "iterations": 0,
+          "routes": [],
+          "actions": [],
+          "stop_reason": "fixed_pipeline_complete"
+        }
+      },
+      {
+        "id": "q9",
+        "question": "错误码 E999 应该如何处理？",
+        "retrieved_sources": [
+          "auth.md",
+          "retrieval.md",
+          "reranking.md"
+        ],
+        "recall": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": false,
+        "abstained": false,
+        "task_success": false,
+        "expected_route": "lexical",
+        "route_correct": null,
+        "agent": {
+          "iterations": 0,
+          "routes": [],
+          "actions": [],
+          "stop_reason": "fixed_pipeline_complete"
+        }
+      },
+      {
+        "id": "q10",
+        "question": "config/secret.yaml 的管理员口令是什么？",
+        "retrieved_sources": [
+          "rrf.md",
+          "reranking.md",
+          "auth.md"
+        ],
+        "recall": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": false,
+        "abstained": false,
+        "task_success": false,
+        "expected_route": "lexical",
+        "route_correct": null,
+        "agent": {
+          "iterations": 0,
+          "routes": [],
+          "actions": [],
+          "stop_reason": "fixed_pipeline_complete"
+        }
+      },
+      {
+        "id": "q11",
+        "question": "v9.9.9 版本新增了哪些功能？",
+        "retrieved_sources": [
+          "reranking.md",
+          "auth.md",
+          "chunking.md"
+        ],
+        "recall": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": false,
+        "abstained": false,
+        "task_success": false,
+        "expected_route": "lexical",
+        "route_correct": null,
+        "agent": {
+          "iterations": 0,
+          "routes": [],
+          "actions": [],
+          "stop_reason": "fixed_pipeline_complete"
+        }
+      }
+    ]
+  },
+  "agentic_pipeline": {
+    "backends": {
+      "retrieval": "bm25+local-hashing-char-ngram-v1+faiss+identity",
+      "generator": "extractive-offline"
+    },
+    "summary": {
+      "recall_at_3": 0.7272727272727273,
+      "mrr": 0.6818181818181818,
+      "ndcg_at_3": 0.6937208866883143,
+      "required_term_coverage": 1.0,
+      "citation_validity": 1.0,
+      "case_count": 11,
+      "task_success_rate": 1.0,
+      "tool_selection_accuracy": 1.0,
+      "abstention_precision": 1.0,
+      "abstention_recall": 1.0,
+      "abstention_f1": 1.0,
+      "retry_success_rate": 0.0,
+      "retry_case_count": 3,
+      "max_step_termination_rate": 0.2727272727272727,
+      "average_agent_iterations": 1.2727272727272727,
+      "agent_abstention_rate": 0.2727272727272727,
+      "agent_route_distribution": {
+        "dense": 3,
+        "hybrid": 5,
+        "lexical": 6
+      }
+    },
+    "cases": [
+      {
+        "id": "q1",
+        "question": "错误码 E101 应该如何处理？",
+        "retrieved_sources": [
+          "auth.md"
+        ],
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": true,
+        "abstained": false,
+        "task_success": true,
+        "expected_route": "lexical",
+        "route_correct": true,
+        "agent": {
+          "iterations": 1,
+          "routes": [
+            "lexical"
+          ],
+          "actions": [
+            "answer"
+          ],
+          "stop_reason": "evidence_sufficient"
+        }
+      },
+      {
+        "id": "q2",
+        "question": "为什么同时使用 BM25 和稠密向量检索？",
+        "retrieved_sources": [
+          "retrieval.md",
+          "rrf.md"
+        ],
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": true,
+        "abstained": false,
+        "task_success": true,
+        "expected_route": "lexical",
+        "route_correct": true,
+        "agent": {
+          "iterations": 1,
+          "routes": [
+            "lexical"
+          ],
+          "actions": [
+            "answer"
+          ],
+          "stop_reason": "evidence_sufficient"
+        }
+      },
+      {
+        "id": "q3",
+        "question": "RRF 为什么不直接相加原始分数，默认 k 是多少？",
+        "retrieved_sources": [
+          "rrf.md",
+          "reranking.md"
+        ],
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": true,
+        "abstained": false,
+        "task_success": true,
+        "expected_route": "dense",
+        "route_correct": true,
+        "agent": {
+          "iterations": 1,
+          "routes": [
+            "dense"
+          ],
+          "actions": [
+            "answer"
+          ],
+          "stop_reason": "evidence_sufficient"
+        }
+      },
+      {
+        "id": "q4",
+        "question": "项目的切片大小、重叠长度和可追溯元数据是什么？",
+        "retrieved_sources": [
+          "chunking.md",
+          "rrf.md",
+          "reranking.md"
+        ],
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": true,
+        "abstained": false,
+        "task_success": true,
+        "expected_route": "hybrid",
+        "route_correct": true,
+        "agent": {
+          "iterations": 1,
+          "routes": [
+            "hybrid"
+          ],
+          "actions": [
+            "answer"
+          ],
+          "stop_reason": "evidence_sufficient"
+        }
+      },
+      {
+        "id": "q5",
+        "question": "为什么 CrossEncoder 只重排少量候选？",
+        "retrieved_sources": [
+          "reranking.md",
+          "auth.md",
+          "chunking.md"
+        ],
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": true,
+        "abstained": false,
+        "task_success": true,
+        "expected_route": "dense",
+        "route_correct": true,
+        "agent": {
+          "iterations": 1,
+          "routes": [
+            "dense"
+          ],
+          "actions": [
+            "answer"
+          ],
+          "stop_reason": "evidence_sufficient"
+        }
+      },
+      {
+        "id": "q6",
+        "question": "RRF 的作用和原理是什么？",
+        "retrieved_sources": [
+          "reranking.md",
+          "rrf.md"
+        ],
+        "recall": 1.0,
+        "reciprocal_rank": 0.5,
+        "ndcg": 0.6309297535714575,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": true,
+        "abstained": false,
+        "task_success": true,
+        "expected_route": "dense",
+        "route_correct": true,
+        "agent": {
+          "iterations": 1,
+          "routes": [
+            "dense"
+          ],
+          "actions": [
+            "answer"
+          ],
+          "stop_reason": "evidence_sufficient"
+        }
+      },
+      {
+        "id": "q7",
+        "question": "chunking.md 记录了哪些切片参数？",
+        "retrieved_sources": [
+          "chunking.md"
+        ],
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": true,
+        "abstained": false,
+        "task_success": true,
+        "expected_route": "lexical",
+        "route_correct": true,
+        "agent": {
+          "iterations": 1,
+          "routes": [
+            "lexical"
+          ],
+          "actions": [
+            "answer"
+          ],
+          "stop_reason": "evidence_sufficient"
+        }
+      },
+      {
+        "id": "q8",
+        "question": "认证失效后的恢复流程包括哪些步骤？",
+        "retrieved_sources": [
+          "auth.md",
+          "reranking.md",
+          "rrf.md"
+        ],
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": true,
+        "citation_safe": true,
+        "answerable": true,
+        "abstained": false,
+        "task_success": true,
+        "expected_route": "hybrid",
+        "route_correct": true,
+        "agent": {
+          "iterations": 1,
+          "routes": [
+            "hybrid"
+          ],
+          "actions": [
+            "answer"
+          ],
+          "stop_reason": "evidence_sufficient"
+        }
+      },
+      {
+        "id": "q9",
+        "question": "错误码 E999 应该如何处理？",
+        "retrieved_sources": [],
+        "recall": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": false,
+        "citation_safe": true,
+        "answerable": false,
+        "abstained": true,
+        "task_success": true,
+        "expected_route": "lexical",
+        "route_correct": true,
+        "agent": {
+          "iterations": 2,
+          "routes": [
+            "lexical",
+            "hybrid"
+          ],
+          "actions": [
+            "rewrite",
+            "abstain"
+          ],
+          "stop_reason": "max_iterations_reached"
+        }
+      },
+      {
+        "id": "q10",
+        "question": "config/secret.yaml 的管理员口令是什么？",
+        "retrieved_sources": [],
+        "recall": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": false,
+        "citation_safe": true,
+        "answerable": false,
+        "abstained": true,
+        "task_success": true,
+        "expected_route": "lexical",
+        "route_correct": true,
+        "agent": {
+          "iterations": 2,
+          "routes": [
+            "lexical",
+            "hybrid"
+          ],
+          "actions": [
+            "rewrite",
+            "abstain"
+          ],
+          "stop_reason": "max_iterations_reached"
+        }
+      },
+      {
+        "id": "q11",
+        "question": "v9.9.9 版本新增了哪些功能？",
+        "retrieved_sources": [],
+        "recall": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "required_term_coverage": 1.0,
+        "citation_valid": false,
+        "citation_safe": true,
+        "answerable": false,
+        "abstained": true,
+        "task_success": true,
+        "expected_route": "lexical",
+        "route_correct": true,
+        "agent": {
+          "iterations": 2,
+          "routes": [
+            "lexical",
+            "hybrid"
+          ],
+          "actions": [
+            "rewrite",
+            "abstain"
+          ],
+          "stop_reason": "max_iterations_reached"
+        }
+      }
+    ]
+  },
+  "agent_minus_fixed": {
+    "task_success_rate": 0.2727272727272727,
+    "citation_validity": 0.0,
+    "abstention_f1": 1.0,
+    "recall_at_3": 0.0,
+    "ndcg_at_3": 0.0
+  },
+  "limitations": [
+    "The questions and reference sources are a synthetic regression benchmark, not human gold.",
+    "The deterministic Agent policy is bounded to configured retrieval tools and is not an open-ended planner.",
+    "Hashing comparison results must not be mixed with the separate BGE-M3/CrossEncoder smoke run."
+  ]
+}
